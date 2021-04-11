@@ -1,14 +1,17 @@
 version: '3.2'
 services:
   postgres:
-    restart: 'always'
+    # restart: 'always'
+    container_name: pgdb
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
     ports:
       - '5432:5432'
     environment:
       - "DB_USER=vini"
       - "DB_PASSWORD=vini"
-      - "DB_DATABASE=vinidb"
-      - "POSTGRES_PASSWORD=password"
+      - "DB_DATABASE=vini"
+      - "POSTGRES_PASSWORD=vini"
     build: './db'
     networks:
       infranet:
