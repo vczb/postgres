@@ -8,10 +8,10 @@ services:
     ports:
       - '5432:5432'
     environment:
-      - "DB_USER=vini"
-      - "DB_PASSWORD=vini"
-      - "DB_DATABASE=vini"
-      - "POSTGRES_PASSWORD=vini"
+      - "DB_USER=my_user"
+      - "DB_PASSWORD=my_password"
+      - "DB_DATABASE=my_database"
+      - "POSTGRES_PASSWORD=password"
     build: './db'
     networks:
       infranet:
